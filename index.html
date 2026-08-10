@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-profile="heritage">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brookbury — Design Direction Preview</title>
+<meta name="description" content="Design direction preview for a Brookbury POA website redesign. Five visual profiles applied to the same sample site.">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/profiles/heritage.css">
+<link rel="stylesheet" href="assets/css/profiles/ozark.css">
+<link rel="stylesheet" href="assets/css/profiles/porch.css">
+<link rel="stylesheet" href="assets/css/profiles/civic.css">
+<link rel="stylesheet" href="assets/css/profiles/luxe.css">
+<link rel="stylesheet" href="assets/css/switcher.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================================================
+     SAMPLE SITE — identical markup for all five design profiles.
+     Everything below is styled only by the active profile's CSS.
+     ============================================================ -->
+<div class="site">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- crest -->
+          <svg class="mark mark-crest" viewBox="0 0 48 56" fill="none">
+            <path d="M24 2 46 9v22c0 12-9 20-22 23C11 51 2 43 2 31V9L24 2Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M24 8 40 13v18c0 9.5-7 16-16 18.5C15 47 8 40.5 8 31V13L24 8Z" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <path d="M24 17v22M24 24l-6-5M24 30l6-5M24 36l-6-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <!-- leaf -->
+          <svg class="mark mark-leaf" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" fill="currentColor" opacity=".12"/>
+            <path d="M35 12c0 13-8 21-19 21 0-13 8-21 19-21Z" fill="currentColor"/>
+            <path d="M13 37C20 30 27 22 33 14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <!-- monogram -->
+          <svg class="mark mark-mono" viewBox="0 0 48 48" fill="none">
+            <rect x="1.5" y="1.5" width="45" height="45" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M15 33V15h8a4.5 4.5 0 0 1 0 9h-8m0 0h9a4.5 4.5 0 0 1 0 9H15Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Brookbury</span>
+          <span class="brand-sub">Property Owners Association</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#welcome" class="is-current">Home</a>
+        <a href="#events">Events</a>
+        <a href="#board">Board</a>
+        <a href="#documents">Covenants</a>
+        <a href="#map">Maps</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="#contact">Contact the Board</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Fayetteville, Arkansas</p>
+          <h1 class="display">A special corner<br>of our town.</h1>
+          <p class="lede">Brookbury is a beautiful, peaceful place to enjoy all of the benefits of family,
+            friends and neighbors — a neighborhood filled with happiness, excitement, and caring.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#events">Upcoming events</a>
+            <a class="btn btn-ghost" href="#documents">Covenants &amp; by-laws</a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <img class="scene" src="assets/images/brookbury-neighborhood.webp"
+            width="1536" height="1024"
+            alt="A quiet, tree-lined residential street with established homes in morning light">
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ul class="facts">
+          <li class="fact"><span class="fact-k">Community</span><span class="fact-v">Brookbury Woods</span></li>
+          <li class="fact"><span class="fact-k">Access</span><span class="fact-v">Closed subdivision</span></li>
+          <li class="fact"><span class="fact-k">Governed by</span><span class="fact-v">Resident POA board</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- WELCOME ---------- -->
+    <section class="section section-welcome" id="welcome">
+      <div class="wrap welcome-grid">
+        <div class="section-head">
+          <p class="kicker">Welcome</p>
+          <h2 class="h2">More than homes —<br>a community.</h2>
+        </div>
+        <div class="prose">
+          <p>Brookbury combines the best of today with the close-knit neighborhoods of yesterday. The
+            residents of Brookbury gather on porches, front yards and in the streets to celebrate a place
+            they call home.</p>
+          <p>Here memories for a lifetime are created. These are more than homes; it's a community with a
+            wealth of creativity and traditional foundations with an eye towards the future. The homes are a
+            showcase of the area's finest architects and craftsmen, designed to accommodate the active
+            lifestyle of our families and friends.</p>
+          <blockquote class="pull">“The residents of Brookbury gather on porches, front yards and in the
+            streets to celebrate a place they call home.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- EVENTS ---------- -->
+    <section class="section section-events" id="events">
+      <div class="wrap">
+        <div class="section-head row">
+          <div>
+            <p class="kicker">Neighborhood calendar</p>
+            <h2 class="h2">Events</h2>
+          </div>
+          <a class="link-more" href="#contact">See the full calendar &rarr;</a>
+        </div>
+
+        <ul class="grid grid-3 events">
+          <li class="card event-card">
+            <img class="event-photo" src="assets/images/event-garage-sale.webp" width="1536" height="1024"
+              loading="lazy" alt="Neighbors browsing tables at a shaded community garage sale">
+            <span class="card-tag">Spring</span>
+            <h3 class="card-title">Neighborhood Garage Sale</h3>
+            <p class="card-body">One weekend, one entrance, the whole neighborhood out front. Signs and
+              advertising handled by the social committee.</p>
+            <span class="card-meta">Community-wide</span>
+          </li>
+          <li class="card event-card">
+            <img class="event-photo" src="assets/images/event-egg-hunt.webp" width="1536" height="1024"
+              loading="lazy" alt="Children gathering colorful eggs on a neighborhood green">
+            <span class="card-tag">Spring</span>
+            <h3 class="card-title">Easter Egg Hunt</h3>
+            <p class="card-body">A morning on the common green for Brookbury kids, with age groups and a
+              potluck breakfast to follow.</p>
+            <span class="card-meta">Families</span>
+          </li>
+          <li class="card event-card">
+            <img class="event-photo" src="assets/images/event-grill-chill.webp" width="1536" height="1024"
+              loading="lazy" alt="Neighbors talking beside a grill during an evening cookout">
+            <span class="card-tag">Spring</span>
+            <h3 class="card-title">Grill &amp; Chill with Neighbors</h3>
+            <p class="card-body">Bring a chair and something for the grill. The most reliable way to meet
+              the people three doors down.</p>
+            <span class="card-meta">All residents</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- DOCUMENTS ---------- -->
+    <section class="section section-docs" id="documents">
+      <div class="wrap docs-grid">
+        <div class="section-head">
+          <p class="kicker">Governing documents</p>
+          <h2 class="h2">Covenants &amp; By-Laws</h2>
+          <p class="section-intro">Every good neighborhood has a set of guidelines established to maintain
+            the value and well-being of the community as a whole — protective ordinances that develop the
+            beauty and maintain the investment of Brookbury home owners.</p>
+        </div>
+
+        <ul class="doc-list">
+          <li class="doc">
+            <span class="doc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span class="doc-text">
+              <span class="doc-title">Brookbury Covenants</span>
+              <span class="doc-sub">Amended 2011 · PDF</span>
+            </span>
+            <span class="doc-cta">Download</span>
+          </li>
+          <li class="doc">
+            <span class="doc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span class="doc-text">
+              <span class="doc-title">By-Laws</span>
+              <span class="doc-sub">Amended 2016 · PDF</span>
+            </span>
+            <span class="doc-cta">Download</span>
+          </li>
+          <li class="doc">
+            <span class="doc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span class="doc-text">
+              <span class="doc-title">Architectural Review Request</span>
+              <span class="doc-sub">Submit before exterior changes · Form</span>
+            </span>
+            <span class="doc-cta">Open</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- BOARD ---------- -->
+    <section class="section section-board" id="board">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Volunteers</p>
+          <h2 class="h2">POA Board Members</h2>
+          <p class="section-intro">Thank you to our POA board members, who spend their time and effort on our
+            behalf. To contact a member, please refer to the directory provided to all Brookbury residents.</p>
+        </div>
+
+        <ul class="board-grid">
+          <li class="member"><span class="member-role">President</span><span class="member-name">Farrell Sexton</span></li>
+          <li class="member"><span class="member-role">Vice President</span><span class="member-name">Paul Crawford</span></li>
+          <li class="member"><span class="member-role">Secretary</span><span class="member-name">Bobbye Kraynik</span></li>
+          <li class="member"><span class="member-role">Treasurer</span><span class="member-name">Ann Gearity</span></li>
+          <li class="member"><span class="member-role">Architectural Chair</span><span class="member-name">Colleen Shepherd</span></li>
+          <li class="member"><span class="member-role">Violations Chair</span><span class="member-name">Holly Harris</span></li>
+          <li class="member"><span class="member-role">Social Chairs</span><span class="member-name">Heather Wagstaff &amp; Amber Evins</span></li>
+          <li class="member"><span class="member-role">Communications Chair</span><span class="member-name">Dan England</span></li>
+          <li class="member"><span class="member-role">Landscaping Chair</span><span class="member-name">Charlotte Quattlebaum</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- MAP ---------- -->
+    <section class="section section-map" id="map">
+      <div class="wrap map-grid">
+        <div class="section-head">
+          <p class="kicker">Getting around</p>
+          <h2 class="h2">Maps</h2>
+          <p class="section-intro">Our neighborhood is a closed subdivision — there is only one way in and
+            out. This helps us maintain traffic flow and keeps drivers' speed to a safe minimum.</p>
+          <p class="note">Maps are currently being updated.</p>
+        </div>
+
+        <div class="map-panel">
+          <svg class="plat" viewBox="0 0 480 320" fill="none" aria-hidden="true">
+            <rect class="p-bg" width="480" height="320"/>
+            <path class="p-road" d="M240 320V196c0-26 22-46 48-46h84M240 196c0-26-22-46-48-46h-84M108 150c-30 0-48 22-48 48s18 48 48 48h56M372 150c30 0 48 22 48 48s-18 48-48 48h-56" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="p-road-2" d="M192 150V74h96v76" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            <g class="p-lots">
+              <rect x="70" y="86" width="46" height="34" rx="2"/><rect x="126" y="86" width="46" height="34" rx="2"/>
+              <rect x="308" y="86" width="46" height="34" rx="2"/><rect x="364" y="86" width="46" height="34" rx="2"/>
+              <rect x="70" y="262" width="46" height="34" rx="2"/><rect x="126" y="262" width="46" height="34" rx="2"/>
+              <rect x="182" y="262" width="46" height="34" rx="2"/>
+              <rect x="308" y="262" width="46" height="34" rx="2"/><rect x="364" y="262" width="46" height="34" rx="2"/>
+              <rect x="204" y="24" width="34" height="34" rx="2"/><rect x="246" y="24" width="34" height="34" rx="2"/>
+            </g>
+            <g class="p-marker">
+              <circle cx="240" cy="306" r="9"/>
+              <text x="258" y="311" text-anchor="start" class="p-label">ENTRANCE</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section class="section section-contact" id="contact">
+      <div class="wrap contact-inner">
+        <div>
+          <p class="kicker">Questions?</p>
+          <h2 class="h2">Reach the board.</h2>
+          <p class="section-intro">New to the neighborhood, planning an exterior project, or want to help
+            with an event — someone on the board can point you the right direction.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#contact">Email the board</a>
+          <a class="btn btn-ghost" href="#documents">Read the covenants</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Brookbury</span>
+        <span class="brand-sub">Property Owners Association · Fayetteville, Arkansas</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#welcome">Home</a>
+        <a href="#events">Events</a>
+        <a href="#board">Board</a>
+        <a href="#documents">Covenants</a>
+        <a href="#map">Maps</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-note">Design direction preview — sample content for stakeholder review.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/profiles.js"></script>
+<script src="assets/js/switcher.js"></script>
+</body>
+</html>

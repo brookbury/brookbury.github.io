@@ -1,0 +1,132 @@
+/* ============================================================
+   REVIEW CHROME — the toolbar the stakeholder drives.
+   Deliberately neutral dark UI so it never reads as part of a
+   design profile. Everything is namespaced .dsw-*.
+   ============================================================ */
+
+.dsw {
+  --dsw-bg: #16181C;
+  --dsw-bg-2: #212429;
+  --dsw-line: #33373E;
+  --dsw-text: #F2F3F5;
+  --dsw-dim: #9BA1AA;
+  --dsw-hi: #6FA8FF;
+
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  translate: -50% 0;
+  z-index: 9999;
+  width: min(1180px, calc(100vw - 24px));
+  background: var(--dsw-bg);
+  color: var(--dsw-text);
+  border: 1px solid var(--dsw-line);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px -12px rgba(0,0,0,.55);
+  font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.dsw-bar { display: flex; align-items: center; gap: 10px; padding: 10px; }
+
+.dsw-label {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--dsw-dim);
+  padding-left: 6px;
+  flex: none;
+}
+
+.dsw-options { display: flex; gap: 6px; flex: 1 1 auto; min-width: 0; overflow-x: auto; }
+
+.dsw-opt {
+  flex: 1 1 0;
+  min-width: 132px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 11px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: var(--dsw-dim);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background .14s ease, color .14s ease, border-color .14s ease;
+}
+.dsw-opt:hover { background: var(--dsw-bg-2); color: var(--dsw-text); }
+.dsw-opt[aria-pressed="true"] {
+  background: var(--dsw-bg-2);
+  border-color: var(--dsw-line);
+  color: var(--dsw-text);
+}
+.dsw-num { font-size: 10px; color: var(--dsw-dim); font-variant-numeric: tabular-nums; flex: none; }
+.dsw-opt[aria-pressed="true"] .dsw-num { color: var(--dsw-hi); }
+.dsw-opt-text { display: flex; flex-direction: column; min-width: 0; }
+.dsw-name { font-weight: 600; font-size: 12.5px; white-space: nowrap; }
+.dsw-tag { font-size: 10.5px; color: var(--dsw-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dsw-sw { display: flex; gap: 3px; margin-left: auto; flex: none; }
+.dsw-sw i { width: 9px; height: 18px; border-radius: 2px; display: block; }
+
+.dsw-tools { display: flex; gap: 6px; flex: none; padding-right: 4px; }
+.dsw-btn {
+  background: transparent;
+  border: 1px solid var(--dsw-line);
+  border-radius: 8px;
+  color: var(--dsw-dim);
+  font: inherit;
+  font-size: 11.5px;
+  padding: 8px 11px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .14s ease, border-color .14s ease;
+}
+.dsw-btn:hover { color: var(--dsw-text); border-color: #4A505A; }
+.dsw-btn[aria-expanded="true"] { color: var(--dsw-text); border-color: #4A505A; background: var(--dsw-bg-2); }
+
+.dsw-panel {
+  display: none;
+  gap: 28px;
+  padding: 18px 18px 20px;
+  border-top: 1px solid var(--dsw-line);
+  background: #101216;
+}
+.dsw.is-open .dsw-panel { display: grid; grid-template-columns: 1.6fr 1fr 1fr; }
+.dsw-panel h3 {
+  margin: 0 0 6px;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--dsw-dim);
+  font-weight: 600;
+}
+.dsw-panel p { margin: 0; color: #D6D9DE; font-size: 12.5px; }
+.dsw-panel .dsw-risk { color: #E8B98A; }
+
+.dsw-hint { color: #6C727B; font-size: 11px; padding: 0 18px 14px; margin: 0; }
+.dsw.is-open .dsw-hint { display: block; }
+.dsw:not(.is-open) .dsw-hint { display: none; }
+
+/* collapsed state — a small tab that gets out of the way */
+.dsw.is-hidden { width: auto; left: auto; right: 18px; translate: none; }
+.dsw.is-hidden .dsw-bar > *:not(.dsw-tools),
+.dsw.is-hidden .dsw-panel,
+.dsw.is-hidden .dsw-hint,
+.dsw.is-hidden .dsw-tools > *:not([data-dsw="show"]) { display: none; }
+.dsw [data-dsw="show"] { display: none; }
+.dsw.is-hidden [data-dsw="show"] { display: block; }
+
+body.chrome-off .dsw { display: none; }
+
+@media (max-width: 900px) {
+  .dsw-label { display: none; }
+  .dsw-bar { flex-wrap: wrap; }
+  .dsw-tag { display: none; }
+  .dsw-opt { min-width: 0; }
+  .dsw.is-open .dsw-panel { grid-template-columns: 1fr; gap: 16px; }
+}

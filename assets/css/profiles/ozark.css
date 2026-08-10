@@ -1,0 +1,140 @@
+/* ============================================================
+   02 · OZARK MODERN — warm, regional, outdoors
+   Clay + moss, heavy geometric type, big soft radii, offset blocks.
+   ============================================================ */
+
+[data-profile="ozark"] {
+  --bg: #FAF4EA;
+  --surface: #FFFFFF;
+  --surface-2: #F0E4D3;
+  --ink: #241E18;
+  --ink-2: #55483C;
+  --muted: #93826F;
+  --line: #E2D3BE;
+  --brand: #C4622D;
+  --brand-ink: #FFF7EE;
+  --accent: #3D5A4C;
+
+  --font-display: "Avenir Next", Avenir, "Futura", "Century Gothic", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  --font-ui: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+
+  --display-size: clamp(2.9rem, 7vw, 5.4rem);
+  --display-weight: 800;
+  --display-lh: 0.98;
+  --display-ls: -0.035em;
+  --h2-size: clamp(2rem, 4vw, 3.2rem);
+  --h2-weight: 800;
+  --h2-ls: -0.03em;
+  --kicker-ls: 0.16em;
+  --kicker-weight: 800;
+  --body-lh: 1.7;
+
+  --radius-card: 22px;
+  --radius-btn: 999px;
+  --radius-pill: 999px;
+  --shadow: 0 2px 0 rgba(36,30,24,.06);
+  --shadow-lift: 0 18px 34px -18px rgba(36,30,24,.35);
+  --grid-gap: 22px;
+  --wrap: 1200px;
+
+  --sc-sky: #F5E3C9; --sc-sun: #E9A559;
+  --sc-hill3: #A8B99C; --sc-hill2: #6E8C74;
+  --sc-tree: #2E4A3B; --sc-house: #FFF7EE; --sc-roof: #C4622D;
+  --sc-ground: #3D5A4C; --sc-creek: #8FB6B0;
+
+  --mp-bg: #F0E4D3; --mp-road: #FAF4EA; --mp-lot: #DCC9AE; --mp-lot-line: #C9B294;
+}
+
+[data-profile="ozark"] .mark-leaf { display: block; color: var(--brand); }
+
+[data-profile="ozark"] .site-header { border-bottom: 0; background: transparent; }
+[data-profile="ozark"] .header-inner { min-height: 96px; }
+[data-profile="ozark"] .brand-name { font-weight: 800; letter-spacing: -0.03em; font-size: 1.6rem; }
+[data-profile="ozark"] .brand-sub { color: var(--accent); font-weight: 700; letter-spacing: 0.12em; }
+[data-profile="ozark"] .nav a { font-weight: 700; font-size: 0.92rem; }
+[data-profile="ozark"] .nav a.is-current { color: var(--brand); }
+[data-profile="ozark"] .btn { font-weight: 800; letter-spacing: -0.01em; }
+
+/* hero: asymmetric, art bleeds right */
+[data-profile="ozark"] .hero { padding-bottom: 0; }
+[data-profile="ozark"] .hero-inner { grid-template-columns: 1fr 1fr; align-items: center; }
+[data-profile="ozark"] .display { text-wrap: balance; }
+[data-profile="ozark"] .eyebrow {
+  display: inline-block;
+  background: var(--surface-2);
+  color: var(--accent);
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+[data-profile="ozark"] .hero-art::before {
+  content: ""; position: absolute; inset: 18px -22px -18px 22px;
+  background: var(--accent); border-radius: 28px;
+}
+[data-profile="ozark"] .scene { position: relative; border-radius: 28px; height: clamp(320px, 38vw, 480px); }
+[data-profile="ozark"] .facts {
+  border: 0; margin-top: clamp(56px, 7vw, 96px);
+  background: var(--surface-2); border-radius: var(--radius-card);
+  padding: 28px clamp(24px, 4vw, 44px); gap: clamp(24px, 6vw, 80px);
+}
+[data-profile="ozark"] .fact-v { font-weight: 800; letter-spacing: -0.02em; }
+
+/* sections */
+[data-profile="ozark"] .section-welcome { background: var(--surface-2); border-radius: 40px; margin-inline: clamp(12px, 3vw, 40px); }
+[data-profile="ozark"] .pull {
+  border-left: 0;
+  background: var(--accent);
+  color: var(--brand-ink);
+  padding: 28px 32px;
+  border-radius: var(--radius-card);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+[data-profile="ozark"] .link-more { color: var(--brand); font-weight: 800; }
+
+/* cards */
+[data-profile="ozark"] .card { border: 0; box-shadow: var(--shadow); }
+[data-profile="ozark"] .events .card:nth-child(1) { background: #FFFFFF; }
+[data-profile="ozark"] .events .card:nth-child(2) { background: #3D5A4C; color: var(--brand-ink); }
+[data-profile="ozark"] .events .card:nth-child(2) .card-body { color: #D6E2D8; }
+[data-profile="ozark"] .events .card:nth-child(2) .card-meta { color: #AFC4B4; border-top-color: rgba(255,255,255,.18); }
+[data-profile="ozark"] .events .card:nth-child(2) .card-tag { background: #FFF7EE; color: #3D5A4C; }
+[data-profile="ozark"] .events .card:nth-child(3) { background: #F0E4D3; }
+[data-profile="ozark"] .card-title { font-weight: 800; letter-spacing: -0.025em; font-size: 1.45rem; }
+[data-profile="ozark"] .card-meta { border-top-color: rgba(36,30,24,.1); }
+
+/* documents */
+[data-profile="ozark"] .doc { border: 0; box-shadow: var(--shadow); padding: 24px 26px; }
+[data-profile="ozark"] .doc:hover { transform: translateX(4px); }
+[data-profile="ozark"] .doc-icon { color: var(--brand); }
+[data-profile="ozark"] .doc-title { font-weight: 800; letter-spacing: -0.02em; }
+[data-profile="ozark"] .doc-cta {
+  background: var(--brand); color: var(--brand-ink);
+  padding: 10px 18px; border-radius: 999px; font-weight: 800;
+}
+
+/* board */
+[data-profile="ozark"] .board-grid { grid-template-columns: repeat(3, 1fr); }
+[data-profile="ozark"] .member {
+  border-top: 0; background: var(--surface); border-radius: 18px; padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+[data-profile="ozark"] .member-role { color: var(--brand); }
+[data-profile="ozark"] .member-name { font-weight: 800; letter-spacing: -0.02em; }
+
+/* map */
+[data-profile="ozark"] .map-panel { border: 0; background: var(--surface-2); border-radius: 32px; }
+
+/* contact */
+[data-profile="ozark"] .section-contact { padding-bottom: clamp(80px, 10vw, 140px); }
+[data-profile="ozark"] .contact-inner {
+  background: var(--brand); color: var(--brand-ink);
+  border-radius: 36px; padding: clamp(36px, 5vw, 64px);
+}
+[data-profile="ozark"] .section-contact .h2 { color: var(--brand-ink); }
+[data-profile="ozark"] .section-contact .kicker { color: #F6D2B4; }
+[data-profile="ozark"] .section-contact .section-intro { color: #FAE0CB; }
+[data-profile="ozark"] .section-contact .btn-primary { background: var(--brand-ink); color: var(--brand); }
+[data-profile="ozark"] .section-contact .btn-ghost { color: var(--brand-ink); border-color: rgba(255,247,238,.5); }
+
+[data-profile="ozark"] .site-footer { background: var(--surface-2); border-top: 0; }
