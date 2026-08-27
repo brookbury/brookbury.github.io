@@ -2,111 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brookbury — Compare all five design profiles</title>
-<style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #0F1114;
-    color: #F2F3F5;
-    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
-  }
-  .head { padding: 40px clamp(20px, 4vw, 56px) 8px; max-width: 1500px; margin-inline: auto; }
-  .eyebrow { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #7E8792; margin: 0 0 10px; }
-  h1 { margin: 0 0 10px; font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -.02em; }
-  .sub { margin: 0; color: #A5ADB8; max-width: 68ch; font-size: 15px; }
-
-  .sheet {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 22px;
-    padding: 32px clamp(20px, 4vw, 56px) 72px;
-    max-width: 1500px;
-    margin-inline: auto;
-  }
-
-  .tile {
-    background: #16181C;
-    border: 1px solid #2A2E35;
-    border-radius: 14px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color .16s ease, transform .16s ease;
-  }
-  .tile:hover { border-color: #4B535F; transform: translateY(-2px); }
-
-  .shot {
-    position: relative;
-    height: 420px;
-    overflow: hidden;
-    background: #fff;
-    border-bottom: 1px solid #2A2E35;
-  }
-  .shot iframe {
-    width: 1440px;
-    height: 1500px;
-    border: 0;
-    transform: scale(.32);
-    transform-origin: top left;
-    pointer-events: none;
-  }
-  .shot::after { content: ""; position: absolute; inset: 0; } /* swallow clicks */
-
-  .meta { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; }
-  .row { display: flex; align-items: baseline; gap: 10px; }
-  .num { font-size: 11px; color: #6FA8FF; font-variant-numeric: tabular-nums; }
-  .name { font-size: 16px; font-weight: 650; letter-spacing: -.01em; }
-  .tag { font-size: 12.5px; color: #9BA1AA; }
-  .pos { margin: 0; font-size: 12.5px; color: #C2C8D0; }
-  .sw { display: flex; gap: 4px; margin-top: 2px; }
-  .sw i { width: 22px; height: 10px; border-radius: 2px; display: block; }
-  .open { margin-top: 4px; font-size: 12px; color: #6FA8FF; }
-
-  .foot { padding: 0 clamp(20px, 4vw, 56px) 64px; max-width: 1500px; margin-inline: auto; color: #6C727B; font-size: 12.5px; }
-</style>
+<!-- The five-direction contact sheet is retired: Heritage Oak was chosen.
+     This redirect only exists so links already shared with the board still land
+     somewhere useful. Safe to delete once those links have aged out. -->
+<meta http-equiv="refresh" content="0; url=index.html">
+<title>Brookbury — moved</title>
 </head>
-<body>
-
-<header class="head">
-  <p class="eyebrow">Brookbury POA · Website redesign</p>
-  <h1>Five design directions</h1>
-  <p class="sub">The same page, the same content, five visual profiles. Open any one to scroll the full
-    sample site and switch between directions live. We're choosing a direction here, not final copy or
-    photography.</p>
-</header>
-
-<div class="sheet" id="sheet"></div>
-
-<p class="foot">Thumbnails are live renders, not images — if one looks off, open it full size.</p>
-
-<script src="assets/js/profiles.js"></script>
-<script>
-  var sheet = document.getElementById('sheet');
-  sheet.innerHTML = window.BROOKBURY_PROFILES.map(function (p) {
-    return '' +
-      '<a class="tile" href="index.html?profile=' + p.id + '">' +
-        '<div class="shot">' +
-          '<iframe src="index.html?profile=' + p.id + '&chrome=off" loading="lazy" title="' + p.name + ' preview" scrolling="no" tabindex="-1"></iframe>' +
-        '</div>' +
-        '<div class="meta">' +
-          '<div class="row"><span class="num">' + p.number + '</span>' +
-            '<span class="name">' + p.name + '</span>' +
-            '<span class="tag">' + p.tagline + '</span></div>' +
-          '<div class="sw">' + p.swatches.map(function (c) {
-            return '<i style="background:' + c + '"></i>';
-          }).join('') + '</div>' +
-          '<p class="pos">' + p.positioning + '</p>' +
-          '<span class="open">Open full size &rarr;</span>' +
-        '</div>' +
-      '</a>';
-  }).join('');
-</script>
-
-</body>
+<body><p><a href="index.html">Brookbury Property Owners Association</a></p></body>
 </html>
