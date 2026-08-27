@@ -1,56 +1,75 @@
 /* ============================================================
-   BASE — structure only.
-   Every colour, font, radius and rhythm value here is a token
-   that a profile file overrides. Nothing in this file should
-   commit to an aesthetic.
+   BROOKBURY POA — Heritage Oak
+   Established, traditional, trusted: symmetry, a crest, hairline
+   double rules, engraved small caps.
+
+   One stylesheet, three parts:
+     1. tokens      — the palette, type scale and rhythm
+     2. structure   — layout for every block on the page
+     3. treatment   — the Heritage Oak styling on top of it
+   Responsive overrides live at the very end and win by source order.
    ============================================================ */
+
+/* ------------------------------------------------------------
+   1 · TOKENS
+   ------------------------------------------------------------ */
 
 :root {
   /* palette */
-  --bg: #fff;
-  --surface: #fafafa;
-  --surface-2: #f3f3f3;
-  --ink: #1a1a1a;
-  --ink-2: #4a4a4a;
-  --muted: #767676;
-  --line: #e2e2e2;
-  --brand: #333;
-  --brand-ink: #fff;
-  --accent: #666;
+  --bg: #FBF8F1;
+  --surface: #FFFFFF;
+  --surface-2: #F3EDE1;
+  --ink: #23291F;
+  --ink-2: #4E5648;
+  --muted: #8B8877;
+  --line: #DED5C2;
+  --brand: #1F3D2B;
+  --brand-ink: #F6F1E4;
+  --accent: #A9803F;
 
   /* type */
-  --font-display: Georgia, serif;
-  --font-body: system-ui, sans-serif;
-  --font-ui: system-ui, sans-serif;
-  --display-size: clamp(2.6rem, 6vw, 4.6rem);
-  --display-weight: 700;
-  --display-lh: 1.05;
-  --display-ls: -0.01em;
-  --h2-size: clamp(1.9rem, 3.4vw, 2.8rem);
-  --h2-weight: 700;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-body: "Iowan Old Style", Palatino, Georgia, serif;
+  --font-ui: "Gill Sans", "Gill Sans MT", Optima, "Trebuchet MS", sans-serif;
+  --display-size: clamp(2.3rem, 4.4vw, 3.5rem);
+  --display-weight: 400;
+  --display-lh: 1.12;
+  --display-ls: 0.005em;
+  --h2-size: clamp(1.8rem, 3vw, 2.5rem);
+  --h2-weight: 400;
   --h2-ls: -0.01em;
   --body-size: 1.0625rem;
   --body-lh: 1.65;
   --lede-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  --kicker-size: 0.75rem;
-  --kicker-ls: 0.14em;
+  --kicker-size: 0.7rem;
+  --kicker-ls: 0.22em;
   --kicker-tf: uppercase;
-  --kicker-weight: 700;
+  --kicker-weight: 600;
 
   /* shape */
-  --radius-card: 4px;
-  --radius-btn: 4px;
-  --radius-pill: 4px;
+  --radius-card: 0;
+  --radius-btn: 0;
+  --radius-pill: 0;
   --border-w: 1px;
   --shadow: none;
   --shadow-lift: none;
 
   /* rhythm */
-  --wrap: 1160px;
+  --wrap: 1080px;
   --gutter: clamp(20px, 5vw, 48px);
   --section-pad: clamp(64px, 9vw, 128px);
   --grid-gap: 28px;
+
+  /* plat map */
+  --mp-bg: #FBF8F1;
+  --mp-road: #DED5C2;
+  --mp-lot: #EFE7D6;
+  --mp-lot-line: #D3C7AE;
 }
+
+/* ------------------------------------------------------------
+   2 · STRUCTURE
+   ------------------------------------------------------------ */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -85,9 +104,8 @@ a { color: inherit; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-/* profiles use full-bleed art and offset blocks that intentionally exceed the
-   container — clip rather than scroll (clip, not hidden, so nothing becomes a
-   scroll container) */
+/* framed plates and offset rules intentionally exceed the container — clip
+   rather than scroll (clip, not hidden, so nothing becomes a scroll container) */
 .site { overflow-x: clip; }
 
 .wrap {
@@ -113,7 +131,6 @@ a { color: inherit; }
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-mark { display: block; flex: none; color: var(--brand); }
-.mark { display: none; width: 40px; height: 40px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-name {
   font-family: var(--font-display);
@@ -207,15 +224,6 @@ a { color: inherit; }
   overflow: hidden;
   color: var(--brand);
 }
-.s-sky   { fill: var(--sc-sky, #dfe7e3); }
-.s-sun   { fill: var(--sc-sun, #f0dcbb); }
-.s-hill-3{ fill: var(--sc-hill3, #b9c9bd); }
-.s-hill-2{ fill: var(--sc-hill2, #8fa895); }
-.s-trees path { fill: var(--sc-tree, #4f6b57); }
-.s-houses path, .s-houses rect { fill: var(--sc-house, #f7f3ec); }
-.s-houses path[stroke] { stroke: var(--sc-roof, #3c4a40); }
-.s-ground{ fill: var(--sc-ground, #6c8672); }
-.s-creek { stroke: var(--sc-creek, #9db8bd); }
 
 .facts {
   list-style: none;
@@ -384,11 +392,11 @@ a { color: inherit; }
   padding: clamp(20px, 3vw, 36px);
   box-shadow: var(--shadow);
 }
-.plat { display: block; width: 100%; height: auto; color: var(--mp-road, #c9cec7); }
-.p-bg { fill: var(--mp-bg, transparent); }
-.p-road { stroke: var(--mp-road, #cfd4cc); }
-.p-road-2 { stroke: var(--mp-road, #cfd4cc); }
-.p-lots rect { fill: var(--mp-lot, #e3e7e0); stroke: var(--mp-lot-line, #c6ccc3); }
+.plat { display: block; width: 100%; height: auto; color: var(--mp-road); }
+.p-bg { fill: var(--mp-bg); }
+.p-road { stroke: var(--mp-road); }
+.p-road-2 { stroke: var(--mp-road); }
+.p-lots rect { fill: var(--mp-lot); stroke: var(--mp-lot-line); }
 .p-marker circle { fill: var(--accent); }
 .p-label {
   fill: var(--muted); font-family: var(--font-ui); font-size: 11px;
@@ -409,7 +417,6 @@ a { color: inherit; }
   border-top: var(--border-w) solid var(--line);
   background: var(--surface);
   padding-block: clamp(40px, 5vw, 64px);
-  margin-bottom: 96px; /* clearance for the switcher bar */
 }
 .footer-inner { display: flex; flex-direction: column; gap: 20px; }
 .footer-brand { display: flex; flex-direction: column; gap: 4px; }
@@ -418,31 +425,190 @@ a { color: inherit; }
 .footer-nav a:hover { color: var(--ink); }
 .footer-note { font-family: var(--font-ui); font-size: 0.8rem; color: var(--muted); margin: 0; }
 
-/* ---------------- responsive ----------------
-   Specificity convention: profile files style with [data-profile="x"] .thing (0,2,0).
-   Base responsive rules therefore need `html` in front (0,2,1) to beat them, and a
-   profile that wants to override a breakpoint uses html[data-profile="x"] .thing —
-   equal specificity, but profile CSS loads last, so the profile wins. */
+/* ------------------------------------------------------------
+   3 · HERITAGE OAK TREATMENT
+   ------------------------------------------------------------ */
+
+/* the crest */
+.mark-crest { display: block; width: 42px; height: 48px; }
+
+/* centred, ceremonial header */
+.site-header {
+  border-bottom: 3px double var(--line);
+  background: var(--bg);
+}
+.header-inner {
+  flex-direction: column;
+  gap: 14px;
+  padding-block: 26px;
+  text-align: center;
+}
+.brand { flex-direction: column; gap: 8px; }
+.brand-text { align-items: center; }
+.brand-name {
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.brand-sub { letter-spacing: 0.22em; font-size: 0.62rem; color: var(--accent); }
+.nav {
+  margin: 0;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-block: 4px;
+  width: 100%;
+  justify-content: center;
+}
+.nav a {
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  position: relative;
+}
+.nav a + a::before {
+  content: ""; position: absolute; left: 0; top: 50%; translate: 0 -50%;
+  width: 1px; height: 12px; background: var(--line);
+}
+.nav a.is-current { color: var(--accent); }
+.header-actions { display: none; }
+
+/* buttons: engraved */
+.btn {
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 16px 32px;
+}
+.btn-ghost { border-color: var(--brand); color: var(--brand); }
+
+/* hero: centred with a framed plate */
+.hero-inner {
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-items: center;
+}
+.hero { padding-top: clamp(36px, 5vw, 68px); }
+.hero-copy { max-width: 46rem; order: 1; }
+.hero-art { order: 2; width: 100%; }
+.lede { margin-inline: auto; max-width: 42ch; }
+.actions { justify-content: center; }
+.eyebrow::after {
+  content: ""; display: block; width: 46px; height: 1px;
+  background: var(--accent); margin: 14px auto 0;
+}
+.scene {
+  border: 1px solid var(--line);
+  outline: 1px solid var(--line);
+  outline-offset: 6px;
+  height: clamp(240px, 30vw, 380px);
+}
+.facts { justify-content: center; text-align: center; border-top-style: double; border-top-width: 3px; }
+.fact { align-items: center; }
+
+/* sections: centred heads with an ornament */
+.section-head:not(.row) { margin-inline: auto; text-align: center; }
+.section-intro { margin-inline: auto; }
+.section-events .section-head.row {
+  flex-direction: column; align-items: center; text-align: center; gap: 10px;
+}
+.section-events .link-more { color: var(--accent); }
+.h2::after {
+  content: "❧";
+  display: block;
+  font-size: 1rem;
+  color: var(--accent);
+  margin-top: 16px;
+  line-height: 1;
+}
+.section-head.row .h2::after { margin-bottom: 4px; }
+
+.welcome-grid,
+.docs-grid,
+.map-grid { grid-template-columns: 1fr; justify-items: center; }
+.prose { max-width: 62ch; text-align: center; }
+.pull {
+  border-left: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+  font-style: italic;
+  text-align: center;
+}
+.section-welcome { background: var(--surface-2); }
+
+/* cards: plate-like */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  outline: 1px solid var(--line);
+  outline-offset: 4px;
+  text-align: center;
+  align-items: center;
+}
+.card:hover { transform: none; border-color: var(--accent); }
+.card-tag {
+  background: transparent; color: var(--accent);
+  border: 1px solid var(--accent); letter-spacing: 0.2em; padding: 5px 12px;
+}
+.card-meta { width: 100%; text-align: center; border-top-color: var(--line); }
+.events { max-width: 100%; }
+
+/* documents */
+.doc-list { width: 100%; max-width: 720px; margin-top: 40px; }
+.doc { background: var(--surface); }
+.doc-cta { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.7rem; }
+
+/* board: register style */
+.section-board { background: var(--surface-2); }
+.board-grid { grid-template-columns: repeat(2, 1fr); column-gap: 64px; }
+.member {
+  flex-direction: row; align-items: baseline; justify-content: space-between;
+  border-top: 0; border-bottom: 1px dotted var(--line); gap: 16px;
+}
+.member-name { font-style: italic; }
+
+/* map */
+.map-panel { border: 1px solid var(--line); outline: 1px solid var(--line); outline-offset: 5px; max-width: 720px; margin-top: 44px; }
+
+/* contact */
+.section-contact { background: var(--brand); color: var(--brand-ink); }
+.section-contact .h2,
+.section-contact .section-intro { color: var(--brand-ink); }
+.section-contact .kicker { color: #D9B978; }
+.contact-inner { justify-content: center; text-align: center; flex-direction: column; }
+.section-contact .btn-primary { background: var(--accent); color: #221E16; }
+.section-contact .btn-ghost { color: var(--brand-ink); border-color: rgba(246,241,228,.45); }
+
+.site-footer { background: var(--bg); border-top: 3px double var(--line); }
+.footer-inner { align-items: center; text-align: center; }
+.footer-brand { align-items: center; }
+.footer-nav { justify-content: center; }
+.footer-nav a { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* ------------------------------------------------------------
+   4 · RESPONSIVE
+   Last in the file on purpose: these rules match the treatment
+   above at equal specificity and win on source order.
+   ------------------------------------------------------------ */
 
 @media (max-width: 940px) {
-  html[data-profile] .hero-inner,
-  html[data-profile] .welcome-grid,
-  html[data-profile] .docs-grid,
-  html[data-profile] .map-grid { grid-template-columns: 1fr; }
-  html[data-profile] .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  html[data-profile] .board-grid { grid-template-columns: repeat(2, 1fr); }
-  html[data-profile] .hero-copy { max-width: none; }
+  .hero-inner,
+  .welcome-grid,
+  .docs-grid,
+  .map-grid { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .board-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-copy { max-width: none; }
   .nav { display: none; }
 }
 @media (max-width: 620px) {
-  html[data-profile] .grid-3,
-  html[data-profile] .board-grid { grid-template-columns: 1fr; }
-  html[data-profile] .facts { gap: 20px; }
+  .grid-3,
+  .board-grid { grid-template-columns: 1fr; }
+  .facts { gap: 20px; }
   .header-inner { min-height: 68px; }
-  .header-actions { display: none; } /* the same CTA sits in the hero and contact block */
   .section-head.row { flex-direction: column; align-items: flex-start; }
   .actions .btn { flex: 1 1 auto; }
 }
-
-/* screenshot mode — hides the switcher chrome */
-body.chrome-off .site-footer { margin-bottom: 0; }
