@@ -9,9 +9,12 @@ covenants enforcement feel legitimate rather than fussy.
 
 ## Live
 
-**https://cjones08.github.io/brookbury-design-preview/**
+**https://brookbury.github.io/**
 
 Published from `main` (root) via GitHub Pages — pushing to `main` redeploys.
+
+The repository is named `brookbury.github.io` to match the `brookbury` organisation that owns it,
+which is what makes Pages serve it from the root rather than a `/repo-name/` subpath.
 
 > **Not yet on the custom domain.** There is deliberately no `CNAME` file in this repo. Adding one
 > makes GitHub Pages serve at brookbury.org and stop serving the github.io address, so it must not
