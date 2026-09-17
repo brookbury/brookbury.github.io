@@ -1,15 +1,11 @@
 # Brookbury — Heritage Oak
 
-A prototype of the brookbury.org redesign in **Heritage Oak**, the design direction the board
-chose out of the five that were reviewed.
+The brookbury.org rebuild, in **Heritage Oak** — the design direction the board chose out of the
+five that were reviewed.
 
-Heritage Oak reads like a charter document: symmetry, a crest, hairline double rules and
-engraved small caps. It signals a neighborhood with standards and a long memory, which is what
-makes covenants enforcement feel legitimate rather than fussy. Its known trade-off is that it
-can read formal — worth watching as the community's demographics shift.
-
-Content, board names, events and document titles come from the current brookbury.org, so the
-prototype is judged against real material.
+Heritage Oak reads like a charter document: symmetry, a crest, hairline double rules and engraved
+small caps. It signals a neighborhood with standards and a long memory, which is what makes
+covenants enforcement feel legitimate rather than fussy.
 
 ## Live
 
@@ -17,10 +13,15 @@ prototype is judged against real material.
 
 Published from `main` (root) via GitHub Pages — pushing to `main` redeploys.
 
+> **Not yet on the custom domain.** There is deliberately no `CNAME` file in this repo. Adding one
+> makes GitHub Pages serve at brookbury.org and stop serving the github.io address, so it must not
+> land until DNS for brookbury.org is live at Cloudflare and pointed here. Adding it early takes
+> the site offline.
+
 ## Run it locally
 
-No build step, no dependencies. Either open `index.html` directly in a browser, or serve it
-from the project root:
+No build step, no dependencies. Either open `index.html` directly in a browser, or serve it from
+the project root:
 
 ```bash
 python3 -m http.server 4173 --directory .
@@ -34,16 +35,42 @@ Then visit `http://localhost:4173/`.
 index.html            the whole site — one page, one stylesheet
 assets/css/site.css   tokens, structure, the Heritage Oak treatment, responsive rules
 assets/images/        hero and event photography
+assets/docs/          the real governing documents, served from this repo
 overview.html         redirect stub (see below)
 ```
 
 `site.css` is deliberately ordered: design tokens, then layout structure, then the Heritage Oak
 styling on top of it, then the responsive overrides last. The responsive block matches the
-treatment above it at equal specificity and wins on source order, so **new rules belong before
-it, not after**.
+treatment above it at equal specificity and wins on source order, so **new rules belong before it,
+not after**.
 
-Colours, type, radii and rhythm are all CSS custom properties on `:root`. Retuning the palette
-or the type scale should not require touching a single component rule.
+Colours, type, radii and rhythm are all CSS custom properties on `:root`. Retuning the palette or
+the type scale should not require touching a single component rule.
+
+## Real material now in place
+
+- **The Covenants and By-Laws download.** Both PDFs were pulled off the current Hostway site and
+  are served from `assets/docs/`. These are the real recorded documents, not placeholders.
+
+## What still needs real material
+
+- **The board roster is not published.** The section was removed rather than ship the nine names
+  carried over from a page last updated in 2018. It goes back in once the secretary confirms the
+  current roster — the `.board-grid` and `.member` styles are still in `site.css` waiting for it.
+- **There is no contact email.** The old site published a personal Gmail belonging to someone not
+  on the roster; that has not been carried over. The contact section currently points residents at
+  the printed directory. It needs a real association-owned address.
+- **No Architectural Review Request form.** The covenants require committee approval before
+  exterior work, but no such form exists on the current site, so the download was removed rather
+  than link to nothing. Restore it if a copy surfaces.
+- **Photography is illustrative.** All four images are generated placeholders standing in for a
+  commissioned shoot. They must be replaced before this is presented as a finished site.
+- **Event copy is illustrative.** The three spring events are real (garage sale, egg hunt, grill
+  and chill); the descriptive sentences under them were written to show how the layout handles
+  detail. No dates or fees were invented.
+- **The map is schematic.** The plat map is a drawn SVG, not the recorded plat, so the prototype
+  still runs entirely offline. The covenants reference the real plat in Plat Book 1, Washington
+  County records.
 
 ### overview.html
 
@@ -54,20 +81,3 @@ Delete it once those have aged out:
 ```bash
 git rm overview.html
 ```
-
-## What still needs real material
-
-- **Photography is illustrative.** The hero and event images are generated placeholders chosen
-  to feel plausible for an established Fayetteville neighborhood. A real build should replace
-  them with commissioned photography of Brookbury residents, streets and events. The plat map
-  remains a schematic SVG so the prototype still runs entirely offline.
-- **The contact email is a placeholder.** The current site publishes a personal Gmail address in
-  the nav; this prototype uses a generic "Email the board" action instead. Worth deciding whether
-  the real site should expose a personal address.
-- **Event copy is illustrative.** The three spring events are real (garage sale, egg hunt, grill
-  and chill); the descriptive sentences under them were written to show how the layout handles
-  detail. No dates or fees were invented.
-- **Documents do not download.** The covenants, by-laws and architectural review links are inert
-  until the real PDFs are hosted.
-- **The map is schematic.** The current site says maps are being updated — that status is shown
-  honestly on the page.

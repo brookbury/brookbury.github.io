@@ -560,6 +560,9 @@ a { color: inherit; }
 .doc-list { width: 100%; max-width: 720px; margin-top: 40px; }
 .doc { background: var(--surface); }
 .doc-cta { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.7rem; }
+/* the document rows are real links now; keep them looking like rows */
+a.doc { text-decoration: none; color: inherit; }
+a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* board: register style */
 .section-board { background: var(--surface-2); }
