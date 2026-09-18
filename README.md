@@ -68,9 +68,11 @@ the type scale should not require touching a single component rule.
   than link to nothing. Restore it if a copy surfaces.
 - **Photography is illustrative.** All four images are generated placeholders standing in for a
   commissioned shoot. They must be replaced before this is presented as a finished site.
-- **Event copy is illustrative.** The three spring events are real (garage sale, egg hunt, grill
-  and chill); the descriptive sentences under them were written to show how the layout handles
-  detail. No dates or fees were invented.
+- **The events section is not published.** The three spring events are real (garage sale, egg hunt,
+  grill and chill), but the current site lists them by name only, with no date, time or place, and
+  the descriptive copy under them was written to show how the layout handles detail. The section was
+  removed rather than publish invented detail; the `.event-card` styles and the three event images
+  are still in the repo waiting for it. It returns once the social chairs supply real dates.
 - **The map is schematic.** The plat map is a drawn SVG, not the recorded plat, so the prototype
   still runs entirely offline. The covenants reference the real plat in Plat Book 1, Washington
   County records.
