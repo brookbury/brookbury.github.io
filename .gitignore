@@ -1,2 +1,10 @@
 .DS_Store
 .claude/settings.local.json
+
+# Residents' personal data lives in the association's Google Drive, never here:
+# this repo is public, and so is every file committed to it.
+*directory*.xlsx
+*directory*.xls
+*directory*.csv
+*directory*.pdf
+*Directory*

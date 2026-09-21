@@ -52,30 +52,31 @@ the type scale should not require touching a single component rule.
 
 ## Real material now in place
 
-- **The Covenants and By-Laws download.** Both PDFs were pulled off the current Hostway site and
-  are served from `assets/docs/`. These are the real recorded documents, not placeholders.
+Everything below was supplied or confirmed by the board.
 
-## What still needs real material
+- **Board roster.** Nine roles as the board listed them. Chris Deen holds two (Violations and
+  Architectural); both are shown.
+- **Contact.** `brookburyneighborhood@gmail.com`, linked from the board intro, the contact section
+  and the "Email the board" button.
+- **Dues.** $190 a year, invoiced each January, due by the last day of February, paid by Venmo to
+  `@BrookburyWoods-Neighborhood`. The "Pay on Venmo" button opens that profile.
+- **Events.** Easter Egg Hunt (spring), End of School Party, and Halloween Party & Parade
+  (October 31). Exact dates and times are posted on the neighborhood's social page, so the site
+  gives timing only. The cards are text-only; the old event photos showed the previous events.
+- **Map.** A live Google map of N Brookbury Crossing, plus an "Open in Google Maps" link. It replaces
+  the drawn schematic, which did not match the real street layout.
+- **Covenants and By-Laws.** Both PDFs download, served from `assets/docs/`.
 
-- **The board roster is not published.** The section was removed rather than ship the nine names
-  carried over from a page last updated in 2018. It goes back in once the secretary confirms the
-  current roster — the `.board-grid` and `.member` styles are still in `site.css` waiting for it.
-- **There is no contact email.** The old site published a personal Gmail belonging to someone not
-  on the roster; that has not been carried over. The contact section currently points residents at
-  the printed directory. It needs a real association-owned address.
-- **No Architectural Review Request form.** The covenants require committee approval before
-  exterior work, but no such form exists on the current site, so the download was removed rather
-  than link to nothing. Restore it if a copy surfaces.
-- **Photography is illustrative.** All four images are generated placeholders standing in for a
-  commissioned shoot. They must be replaced before this is presented as a finished site.
-- **The events section is not published.** The three spring events are real (garage sale, egg hunt,
-  grill and chill), but the current site lists them by name only, with no date, time or place, and
-  the descriptive copy under them was written to show how the layout handles detail. The section was
-  removed rather than publish invented detail; the `.event-card` styles and the three event images
-  are still in the repo waiting for it. It returns once the social chairs supply real dates.
-- **The map is schematic.** The plat map is a drawn SVG, not the recorded plat, so the prototype
-  still runs entirely offline. The covenants reference the real plat in Plat Book 1, Washington
-  County records.
+## Still to come
+
+- **The social page link.** The events intro names the neighborhood's social page but cannot link
+  to it until the board supplies the address.
+- **Architectural Review Request form.** The board is creating one; it belongs in the documents list.
+- **Residents' directory and the detailed neighborhood map.** These hold residents' personal
+  details and **must never be committed to this repository** — it is public, and so is every
+  file in it. They live in the association's Google Drive; the site only links to them.
+- **Photography.** The hero image is a generated stand-in, not Brookbury. The board is using it until
+  their photographer can shoot the neighborhood.
 
 ### overview.html
 
