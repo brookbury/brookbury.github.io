@@ -668,6 +668,17 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .board-grid { grid-template-columns: 1fr; }
   /* stacked, so two values side by side don't read as one phrase */
   .facts { flex-direction: column; align-items: center; gap: 18px; }
+
+  /* running text is left-aligned on phones, at full column width so its left
+     edge lines up with the buttons and plates; headings stay centred */
+  .section-head,
+  .lede,
+  .prose,
+  .section-intro { max-width: none; }
+  .lede,
+  .prose,
+  .section-intro,
+  .contact-email { text-align: left; }
   .header-inner { min-height: 68px; }
   .section-head.row { flex-direction: column; align-items: flex-start; }
 
