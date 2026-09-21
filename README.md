@@ -70,7 +70,8 @@ Everything below was supplied or confirmed by the board.
   lot is a `<g class="lot" data-number="..." data-street="...">`, so a name is updated by editing the
   text inside that lot. The names date from 2022 and should be refreshed from the current
   directory.
-- **Covenants and By-Laws.** Both PDFs download, served from `assets/docs/`.
+- **Covenants.** The PDF downloads, served from `assets/docs/`. The By-Laws are no longer
+  published on the site.
 
 ## Still to come
 
