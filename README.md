@@ -61,8 +61,8 @@ Everything below was supplied or confirmed by the board.
 - **Dues.** $190 a year, invoiced each January, due by the last day of February, paid by Venmo to
   `@BrookburyWoods-Neighborhood`. The "Pay on Venmo" button opens that profile.
 - **Events.** Easter Egg Hunt (spring), End of School Party, and Halloween Party & Parade
-  (October 31). Exact dates and times are posted on the neighborhood's social page, so the site
-  gives timing only. The cards are text-only; the old event photos showed the previous events.
+  (October 31). Exact dates and times are posted in the neighborhood's private Facebook group,
+  which the events intro links to, so the site gives timing only. The cards are text-only; the old event photos showed the previous events.
 - **Map.** A live Google map of N Brookbury Crossing, plus an "Open in Google Maps" link. It replaces
   the drawn schematic, which did not match the real street layout.
 - **Neighborhood map.** `assets/maps/brookbury-map.svg`: the map from the 2022 printed directory,
@@ -74,8 +74,6 @@ Everything below was supplied or confirmed by the board.
 
 ## Still to come
 
-- **The social page link.** The events intro names the neighborhood's social page but cannot link
-  to it until the board supplies the address.
 - **Architectural Review Request form.** The board is creating one; it belongs in the documents list.
 - **Residents' directory.** Phone numbers and email addresses **must never be committed to this
   repository** — it is public, and so is every file in it. The directory lives in the
