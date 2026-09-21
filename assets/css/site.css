@@ -621,7 +621,19 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 /* map: the live map replaces the drawn schematic */
 .map-panel { width: 100%; }
 .map-embed { display: block; width: 100%; height: clamp(280px, 42vw, 440px); border: 0; }
-.map-link { margin-top: 24px; }
+.map-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 24px; }
+/* the neighborhood map: an overview on the page, readable once opened full size */
+.neighborhood-map { width: 100%; max-width: 1000px; margin: 44px 0 0; }
+.neighborhood-map a {
+  display: block; background: #FFFFFF;
+  border: 1px solid var(--line); outline: 1px solid var(--line); outline-offset: 5px;
+}
+.neighborhood-map a:focus-visible { outline: 2px solid var(--accent); }
+.neighborhood-map img { display: block; width: 100%; height: auto; }
+.neighborhood-map figcaption {
+  margin-top: 16px; text-align: center;
+  font-family: var(--font-ui); font-size: 0.82rem; color: var(--muted);
+}
 
 /* contact: the address itself, readable and copyable */
 .contact-email { margin: 16px 0 0; font-family: var(--font-ui); font-size: 1.05rem; letter-spacing: 0.02em; }

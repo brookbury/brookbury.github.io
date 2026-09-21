@@ -65,6 +65,11 @@ Everything below was supplied or confirmed by the board.
   gives timing only. The cards are text-only; the old event photos showed the previous events.
 - **Map.** A live Google map of N Brookbury Crossing, plus an "Open in Google Maps" link. It replaces
   the drawn schematic, which did not match the real street layout.
+- **Neighborhood map.** `assets/maps/brookbury-map.svg`: the map from the 2022 printed directory,
+  redrawn with each resident's name and house number, and published at the board's request. Every
+  lot is a `<g class="lot" data-number="..." data-street="...">`, so a name is updated by editing the
+  text inside that lot. The names date from 2022 and should be refreshed from the current
+  directory.
 - **Covenants and By-Laws.** Both PDFs download, served from `assets/docs/`.
 
 ## Still to come
@@ -72,9 +77,9 @@ Everything below was supplied or confirmed by the board.
 - **The social page link.** The events intro names the neighborhood's social page but cannot link
   to it until the board supplies the address.
 - **Architectural Review Request form.** The board is creating one; it belongs in the documents list.
-- **Residents' directory and the detailed neighborhood map.** These hold residents' personal
-  details and **must never be committed to this repository** — it is public, and so is every
-  file in it. They live in the association's Google Drive; the site only links to them.
+- **Residents' directory.** Phone numbers and email addresses **must never be committed to this
+  repository** — it is public, and so is every file in it. The directory lives in the
+  association's Google Drive; the site only links to it.
 - **Photography.** The hero image is a generated stand-in, not Brookbury. The board is using it until
   their photographer can shoot the neighborhood.
 
