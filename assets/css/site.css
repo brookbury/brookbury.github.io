@@ -571,7 +571,9 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   flex-direction: row; align-items: baseline; justify-content: space-between;
   border-top: 0; border-bottom: 1px dotted var(--line); gap: 16px;
 }
-.member-name { font-style: italic; }
+/* the role never breaks; a long name wraps and stays flush right */
+.member-role { flex: none; }
+.member-name { font-style: italic; text-align: right; }
 
 /* map */
 .map-panel { border: 1px solid var(--line); outline: 1px solid var(--line); outline-offset: 5px; max-width: 720px; margin-top: 44px; }
@@ -584,6 +586,7 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .contact-inner { justify-content: center; text-align: center; flex-direction: column; }
 .section-contact .btn-primary { background: var(--accent); color: #221E16; }
 .section-contact .btn-ghost { color: var(--brand-ink); border-color: rgba(246,241,228,.45); }
+.contact-actions { justify-content: center; }
 
 .site-footer { background: var(--bg); border-top: 3px double var(--line); }
 .footer-inner { align-items: center; text-align: center; }
@@ -637,7 +640,11 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* contact: the address itself, readable and copyable */
 .contact-email { margin: 16px 0 0; font-family: var(--font-ui); font-size: 1.05rem; letter-spacing: 0.02em; }
-.section-contact .contact-email a { color: var(--brand-ink); text-underline-offset: 4px; }
+/* padded out to a full-size tap target; the negative margin keeps the line where it was */
+.section-contact .contact-email a {
+  color: var(--brand-ink); text-underline-offset: 4px;
+  display: inline-block; padding-block: 12px; margin-block: -12px;
+}
 
 /* ------------------------------------------------------------
    4 · RESPONSIVE
@@ -653,13 +660,42 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .board-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-copy { max-width: none; }
-  .nav { display: none; }
+  /* the nav stays on one row down to phone width; taller links for touch */
+  .nav a { padding: 12px 16px; }
 }
 @media (max-width: 620px) {
   .grid-3,
   .board-grid { grid-template-columns: 1fr; }
-  .facts { gap: 20px; }
+  /* stacked, so two values side by side don't read as one phrase */
+  .facts { flex-direction: column; align-items: center; gap: 18px; }
   .header-inner { min-height: 68px; }
   .section-head.row { flex-direction: column; align-items: flex-start; }
-  .actions .btn { flex: 1 1 auto; }
+
+  /* nav: two rows of three; the dividers would crowd the longer words */
+  .nav { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 0; }
+  .nav a { padding: 13px 4px; }
+  .nav a + a::before { display: none; }
+
+  /* calls to action: one full-width button per row, the same size in every section */
+  .actions,
+  .map-actions,
+  .contact-actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .dues-pay .btn { align-self: stretch; }
+
+  /* documents: Download drops under the title so neither has to wrap */
+  .doc {
+    display: grid; grid-template-columns: 28px 1fr;
+    column-gap: 16px; row-gap: 10px; align-items: start;
+  }
+  .doc-icon { grid-row: span 2; }
+  .doc-cta { margin-left: 0; }
+
+  /* board: the dotted rules alone separate the rows */
+  .board-grid { row-gap: 0; }
+  .member { padding-block: 14px; }
+
+  .footer-nav { column-gap: 20px; row-gap: 0; }
+  .footer-nav a { padding-block: 12px; }
+  .footer-brand .brand-sub span { display: block; }
+  .footer-brand .brand-sub .brand-sep { display: none; }
 }
