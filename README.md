@@ -58,8 +58,6 @@ Everything below was supplied or confirmed by the board.
   Architectural); both are shown.
 - **Contact.** `brookburyneighborhood@gmail.com`, linked from the board intro, the contact section
   and the "Email the board" button.
-- **Dues.** $190 a year, invoiced each January, due by the last day of February, paid by Venmo to
-  `@BrookburyWoods-Neighborhood`. The "Pay on Venmo" button opens that profile.
 - **Events.** Easter Egg Hunt (spring), End of School Party, and Halloween Party & Parade
   (October 31). Exact dates and times are posted in the neighborhood's private Facebook group,
   which the events intro links to, so the site gives timing only. The cards are text-only; the old event photos showed the previous events.
@@ -76,6 +74,9 @@ Everything below was supplied or confirmed by the board.
 ## Still to come
 
 - **Architectural Review Request form.** The board is creating one; it belongs in the documents list.
+- **Dues.** The section is hidden for now; the board may move the dues details to one of its
+  private Google Docs instead. The `.dues-*` styles are still in `site.css`, so the section can be
+  restored from the git history if it comes back.
 - **Residents' directory.** Phone numbers and email addresses **must never be committed to this
   repository** — it is public, and so is every file in it. The directory lives in the
   association's Google Drive; the site only links to it.

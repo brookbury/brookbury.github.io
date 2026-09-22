@@ -682,9 +682,10 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .header-inner { min-height: 68px; }
   .section-head.row { flex-direction: column; align-items: flex-start; }
 
-  /* nav: two rows of three; the dividers would crowd the longer words */
-  .nav { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 0; }
-  .nav a { padding: 13px 4px; }
+  /* nav: rows of three with a short last row centred; the dividers would
+     crowd the longer words */
+  .nav { flex-wrap: wrap; padding-block: 0; }
+  .nav a { flex: 0 0 calc(100% / 3); padding: 13px 4px; }
   .nav a + a::before { display: none; }
 
   /* calls to action: one full-width button per row, the same size in every section */
