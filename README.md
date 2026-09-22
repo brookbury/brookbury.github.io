@@ -70,6 +70,11 @@ Everything below was supplied or confirmed by the board.
   directory.
 - **Covenants.** The PDF downloads, served from `assets/docs/`. The By-Laws are no longer
   published on the site.
+- **Directory.** The Directory section links to a PDF export of the board's Google Sheet, so it is
+  always current and no copy lives in this repo. The sheet is restricted: the link opens only for
+  Google accounts the board has approved, and "Request access" emails the board. Phone numbers and
+  email addresses **must never be committed to this repository** — it is public, and so is every
+  file in it.
 
 ## Still to come
 
@@ -77,9 +82,6 @@ Everything below was supplied or confirmed by the board.
 - **Dues.** The section is hidden for now; the board may move the dues details to one of its
   private Google Docs instead. The `.dues-*` styles are still in `site.css`, so the section can be
   restored from the git history if it comes back.
-- **Residents' directory.** Phone numbers and email addresses **must never be committed to this
-  repository** — it is public, and so is every file in it. The directory lives in the
-  association's Google Drive; the site only links to it.
 - **Photography.** The hero image is a generated stand-in, not Brookbury. The board is using it until
   their photographer can shoot the neighborhood.
 

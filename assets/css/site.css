@@ -602,6 +602,9 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 /* links inside intro copy, e.g. the board's email address */
 .section-intro a { color: var(--brand); text-underline-offset: 3px; }
 
+/* a row of buttons under a section head */
+.section-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 24px; }
+
 /* dues: one plate carrying the amount and the way to pay */
 .dues-grid { display: grid; justify-items: center; }
 .dues-pay {
@@ -624,7 +627,6 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 /* map: the live map replaces the drawn schematic */
 .map-panel { width: 100%; }
 .map-embed { display: block; width: 100%; height: clamp(280px, 42vw, 440px); border: 0; }
-.map-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 24px; }
 /* the neighborhood map: an overview on the page, readable once opened full size */
 .neighborhood-map { width: 100%; max-width: 1000px; margin: 44px 0 0; }
 .neighborhood-map a {
@@ -678,6 +680,7 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .lede,
   .prose,
   .section-intro,
+  .note,
   .contact-email { text-align: left; }
   .header-inner { min-height: 68px; }
   .section-head.row { flex-direction: column; align-items: flex-start; }
@@ -690,7 +693,7 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
   /* calls to action: one full-width button per row, the same size in every section */
   .actions,
-  .map-actions,
+  .section-actions,
   .contact-actions { flex-direction: column; align-items: stretch; width: 100%; }
   .dues-pay .btn { align-self: stretch; }
 
