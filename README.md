@@ -66,8 +66,9 @@ Everything below was supplied or confirmed by the board.
 - **Neighborhood map.** `assets/maps/brookbury-map.svg`: the map from the 2022 printed directory,
   redrawn with each home's house number. Every lot is a
   `<g class="lot" data-number="..." data-street="...">`, so a number is updated by editing the text
-  inside that lot. A version carrying residents' names was published first and then replaced by this
-  one; names now live only in the directory, which is behind a Google sign-in.
+  inside that lot. A version carrying residents' names was published here first and then replaced by
+  this one. That version now lives in the board's Google Drive, restricted the way the directory is,
+  and the Maps section links to it.
 - **Covenants.** The PDF downloads, served from `assets/docs/`. The By-Laws are no longer
   published on the site.
 - **Directory.** The Directory section links to a PDF export of the board's Google Sheet, so it is
