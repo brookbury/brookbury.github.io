@@ -64,10 +64,10 @@ Everything below was supplied or confirmed by the board.
 - **Map.** A live Google map of N Brookbury Crossing, plus an "Open in Google Maps" link. It replaces
   the drawn schematic, which did not match the real street layout.
 - **Neighborhood map.** `assets/maps/brookbury-map.svg`: the map from the 2022 printed directory,
-  redrawn with each resident's name and house number, and published at the board's request. Every
-  lot is a `<g class="lot" data-number="..." data-street="...">`, so a name is updated by editing the
-  text inside that lot. The names date from 2022 and should be refreshed from the current
-  directory.
+  redrawn with each home's house number. Every lot is a
+  `<g class="lot" data-number="..." data-street="...">`, so a number is updated by editing the text
+  inside that lot. A version carrying residents' names was published first and then replaced by this
+  one; names now live only in the directory, which is behind a Google sign-in.
 - **Covenants.** The PDF downloads, served from `assets/docs/`. The By-Laws are no longer
   published on the site.
 - **Directory.** The Directory section links to a PDF export of the board's Google Sheet, so it is
