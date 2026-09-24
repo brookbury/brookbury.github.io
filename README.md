@@ -9,17 +9,18 @@ covenants enforcement feel legitimate rather than fussy.
 
 ## Live
 
-**https://brookbury.github.io/**
+**https://brookbury.org**
 
 Published from `main` (root) via GitHub Pages — pushing to `main` redeploys.
 
+The custom domain went live on 24 September 2026. At Cloudflare, `brookbury.org` and `www` are
+CNAME records pointing at `brookbury.github.io`, both **DNS only** — turning on Cloudflare's proxy
+stops GitHub from renewing the certificate. `CNAME` in the repo root holds the domain; deleting it
+sends the site back to the github.io address, which now redirects here. www redirects to the bare
+domain, and HTTPS is enforced on a Let's Encrypt certificate GitHub renews itself.
+
 The repository is named `brookbury.github.io` to match the `brookbury` organisation that owns it,
 which is what makes Pages serve it from the root rather than a `/repo-name/` subpath.
-
-> **Not yet on the custom domain.** There is deliberately no `CNAME` file in this repo. Adding one
-> makes GitHub Pages serve at brookbury.org and stop serving the github.io address, so it must not
-> land until DNS for brookbury.org is live at Cloudflare and pointed here. Adding it early takes
-> the site offline.
 
 ## Run it locally
 
