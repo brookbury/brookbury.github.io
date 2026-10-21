@@ -38,7 +38,7 @@ Then visit `http://localhost:4173/`.
 ```
 index.html            the whole site — one page, one stylesheet
 assets/css/site.css   tokens, structure, the Heritage Oak treatment, responsive rules
-assets/images/        hero and event photography
+assets/images/        hero and neighborhood photography
 assets/docs/          the real governing documents, served from this repo
 overview.html         redirect stub (see below)
 ```
@@ -77,6 +77,16 @@ Everything below was supplied or confirmed by the board.
   Google accounts the board has approved, and "Request access" emails the board. Phone numbers and
   email addresses **must never be committed to this repository** — it is public, and so is every
   file in it.
+- **Photography.** Shot by the board's photographer on 20 October 2026. The hero is the entrance
+  sign (`brookbury-entrance.webp`, with a 1200px copy for phones). Two bands of three photos share
+  the `.photo-band` style: the Welcome section has the roundabout, the grasses island and a
+  tree-lined street; the Maps section, under the live map, has the entrance road with its dead-end
+  sign, the boulder median and the planted island. Photos that feature one resident's house were
+  left out. The web copies are WebP, converted from the camera's Adobe RGB to
+  sRGB with the metadata stripped. The originals are 30–45 MB each and stay out of the repo: the
+  photographer's download folder is named `brookburydirectory-photo-download-…`, so the
+  `*Directory*` rule in `.gitignore` ignores it (git ignores case on a Mac). Give web copies names
+  without "directory" in them, or they will be silently left out of commits.
 
 ## Still to come
 
@@ -84,8 +94,6 @@ Everything below was supplied or confirmed by the board.
 - **Dues.** The section is hidden for now; the board may move the dues details to one of its
   private Google Docs instead. The `.dues-*` styles are still in `site.css`, so the section can be
   restored from the git history if it comes back.
-- **Photography.** The hero image is a generated stand-in, not Brookbury. The board is using it until
-  their photographer can shoot the neighborhood.
 
 ### overview.html
 
