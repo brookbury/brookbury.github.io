@@ -538,18 +538,6 @@ a { color: inherit; }
   text-align: center;
 }
 .section-welcome { background: var(--surface-2); }
-/* a band of neighborhood photographs, framed like the hero plate; shown whole
-   at their own 3:2 so a sign near the edge of a frame is never cropped */
-.photo-band {
-  list-style: none; margin: 0; padding: 0; width: 100%;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap);
-}
-.photo-band img {
-  display: block; width: 100%;
-  height: auto; aspect-ratio: 3 / 2;
-  object-fit: cover;
-  border: 1px solid var(--line); outline: 1px solid var(--line); outline-offset: 4px;
-}
 
 /* cards: plate-like */
 .card {
@@ -679,8 +667,7 @@ a.doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 }
 @media (max-width: 620px) {
   .grid-3,
-  .board-grid,
-  .photo-band { grid-template-columns: 1fr; }
+  .board-grid { grid-template-columns: 1fr; }
   /* stacked, so two values side by side don't read as one phrase */
   .facts { flex-direction: column; align-items: center; gap: 18px; }
 

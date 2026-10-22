@@ -38,7 +38,7 @@ Then visit `http://localhost:4173/`.
 ```
 index.html            the whole site — one page, one stylesheet
 assets/css/site.css   tokens, structure, the Heritage Oak treatment, responsive rules
-assets/images/        hero and neighborhood photography
+assets/images/        hero photography
 assets/docs/          the real governing documents, served from this repo
 overview.html         redirect stub (see below)
 ```
@@ -78,11 +78,9 @@ Everything below was supplied or confirmed by the board.
   email addresses **must never be committed to this repository** — it is public, and so is every
   file in it.
 - **Photography.** Shot by the board's photographer on 20 October 2026. The hero is the entrance
-  sign (`brookbury-entrance.webp`, with a 1200px copy for phones). Two bands of three photos share
-  the `.photo-band` style: the Welcome section has the roundabout, the grasses island and a
-  tree-lined street; the Maps section, under the live map, has the entrance road with its dead-end
-  sign, the boulder median and the planted island. Photos that feature one resident's house were
-  left out. The web copies are WebP, converted from the camera's Adobe RGB to
+  sign (`brookbury-entrance.webp`, with a 1200px copy for phones), and it is the only photo on the
+  page. Rows of three more photos under the Welcome text and the map went live briefly and were
+  taken out again; commit `e6c9802` has them if they come back. The web copies are WebP, converted from the camera's Adobe RGB to
   sRGB with the metadata stripped. The originals are 30–45 MB each and stay out of the repo: the
   photographer's download folder is named `brookburydirectory-photo-download-…`, so the
   `*Directory*` rule in `.gitignore` ignores it (git ignores case on a Mac). Give web copies names
